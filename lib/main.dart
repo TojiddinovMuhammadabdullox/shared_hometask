@@ -3,20 +3,21 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
   bool _isDarkMode = false;
   bool _isCustomColor = false;
-  Color _customBackgroundColor = Colors.blueGrey;
+  final Color _customBackgroundColor = Colors.blueGrey;
   double _fontSize = 16.0;
 
   @override
@@ -91,7 +92,7 @@ class HomeScreen extends StatelessWidget {
   final ValueChanged<double> onFontSizeChanged;
 
   const HomeScreen({
-    Key? key,
+    super.key,
     required this.isDarkMode,
     required this.onThemeChanged,
     required this.isCustomColor,
@@ -99,7 +100,7 @@ class HomeScreen extends StatelessWidget {
     required this.customBackgroundColor,
     required this.fontSize,
     required this.onFontSizeChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
