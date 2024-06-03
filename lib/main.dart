@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   bool _isDarkMode = false;
   bool _isCustomColor = false;
   final Color _customBackgroundColor = Colors.blueGrey;
-  double _fontSize = 16.0;
+  double _fontSize = 16.0;  
 
   @override
   void initState() {
